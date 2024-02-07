@@ -10,7 +10,7 @@ export class GetDataService {
   constructor(private http: HttpClient) { }
 
   baseurl = "https://api.themoviedb.org/3";
-  apikey = "88a784b7853fdbfd608674c00d02eb5f";
+  apikey = "<YOUR_APIKEY>";
 
   trendingMovieApiData(page:number): Observable<any> {
     return this.http.get<{results: any[]}>(`${this.baseurl}/trending/movie/day?api_key=${this.apikey}&page=${page}`)
