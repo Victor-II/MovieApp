@@ -3,6 +3,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
+## Extra Features
+- Debounced Search: the API is called only after 0.5 seconds have passed since the user stopped typing in the search bar.
+- Paginated calls: for `movie-dashboard` section, `category-dashboard` section and search results.
+- Movie details pages: clicking on any movie poster will lead to that movie's `movie-details` page.
+- Multiple categories: the `Categories` button on the nav bar leads to `genres-dashboard`, where movies from each category are displayed.
+- Individual category pages: clicking on the category titles in the `genres-dashboard` section or in the `movie-details` pages will lead to that specific `category-dashboard`.
+
 ## Clone repository
 In order to clone this repository open the Terminal, Change the current working directory to the location where you want the cloned repository and run the following command into the Terminal:
 
