@@ -13,7 +13,7 @@ export class SearchService {
   public searchSubject = new BehaviorSubject<string>("");
   search = this.searchSubject.asObservable();
   baseurl = "https://api.themoviedb.org/3";
-  apikey = "88a784b7853fdbfd608674c00d02eb5f";
+  apikey = "<YOUR_APIKEY>";
 
   updateSearch(search: string) {
     this.searchSubject.next(search);
