@@ -1,0 +1,15 @@
+<div class="content-container">
+    <div class="page-title">
+        <h1>Favorites</h1>
+    </div>
+    <ng-container *ngIf="(favoriteMovieApiData | async)?.length != 0; else elseblock">
+        <div class="movie-container">
+            <ng-container *ngFor="let f of favoriteMovieApiData | async">
+                <app-movie-card [movieDetails]="f"></app-movie-card>
+            </ng-container>
+        </div>
+    </ng-container>
+    <ng-template #elseblock>
+        <div class="no-favorites-text">No favorite movies added</div>
+    </ng-template>
+</div>

@@ -1,0 +1,28 @@
+
+<div *ngIf="movieDetails | async as m" class="container">
+    <div class="movie-poster">
+        <img src="https://image.tmdb.org/t/p/original/{{ m.poster_path }}" alt="{{m.title}}">
+    </div>
+        <div class="movie-details-container">
+            <div class="movie-title">
+                <h1>{{m.title}}</h1>
+                <br>
+                <h4>{{m.release_date}}</h4>
+            </div>
+            <div class="movie-overview">
+                <h3>Overview</h3>
+                <br>
+                ❝ {{m.overview}} ❞
+            </div>
+            <hr>
+            <div class="movie-genres">
+                <br>
+                <p *ngFor="let g of m.genres">
+                    <a [routerLink]="['/categories', g.id, g.name]">• {{g.name}}</a>
+                <p>
+            </div>
+            <div class="movie-rating"><p>★ {{m.vote_average}} </p></div>
+        </div>
+</div>
+
+

@@ -1,0 +1,18 @@
+
+<div class="content-container">
+    <div class="page-title">
+        <h1>{{displayText}}</h1>
+    </div>
+    <div class="movie-container">
+        <ng-container *ngFor="let t of displayData | async">
+            <app-movie-card [movieDetails]="t"></app-movie-card>
+        </ng-container>
+    </div>
+    <div class="page-bottom">
+        <button class="pageUp" (click)="incrementPage()">Next</button>
+        <div *ngIf="currentPage != 1">
+            <button class="pageDown" (click)="toFirstPage()">≪</button>
+            <button class="pageDown" (click)="decrementPage()">Back</button>
+        </div>
+    </div>
+</div>

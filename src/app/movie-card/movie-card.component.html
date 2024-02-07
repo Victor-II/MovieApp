@@ -1,0 +1,9 @@
+<div class="movie-card">
+
+    <a [routerLink]="['/movies', movieDetails.id]" routerLinkActive="active"><img class="movie-poster" src="https://image.tmdb.org/t/p/original/{{ movieDetails.poster_path }}" alt="{{movieDetails.title}}"></a>
+    <h3>{{movieDetails.title}}</h3>
+    <h5>{{movieDetails.release_date}}</h5>
+    <div class="favorite-btn">
+        <button class="favorite-btn" (click)="toggleFavorite(movieDetails.id)" [title]="!dataService.isFavorite(movieDetails.id) ? 'Add to Favorites' : 'Remove from  Favorites'" [ngClass]="dataService.isFavorite(movieDetails.id) ? 'favorite' : ''">❤</button>
+    </div>
+</div>

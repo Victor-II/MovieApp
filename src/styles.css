@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('site-background.jpg');
+    background-size: repeat;
+    background-color: black;
+}
