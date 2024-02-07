@@ -11,7 +11,7 @@ export class FavoritesService {
   constructor(private http:HttpClient) { }
 
   baseurl = "https://api.themoviedb.org/3";
-  apikey = "88a784b7853fdbfd608674c00d02eb5f";
+  apikey = "<YOUR_APIKEY>";
 
   private favoritesSubject = new BehaviorSubject<number[]>(this.getFavorites());
   favorites = this.favoritesSubject.asObservable();
