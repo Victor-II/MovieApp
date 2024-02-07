@@ -9,6 +9,14 @@ In order to clone this repository open the Terminal, Change the current working 
 ```
 $ git clone https://github.com/Victor-II/MovieApp
 ```
+## Generate API KEY
+In order for the app to work you will need to replace the value of `apikey` with your api key in the following locations:
+```
+- MovieApp/app/src/app/services/favorites.service.ts
+- MovieApp/app/src/app/services/favorites.service.ts
+- MovieApp/app/src/app/services/favorites.service.ts
+```
+
 ## Open project
 To open the project run the following commands into the Terminal:
 
